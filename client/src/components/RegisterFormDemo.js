@@ -24,6 +24,14 @@ function RegisterFormDemo() {
   };
   console.log(watch("example")); // you can watch individual input by pass the name of the input
   console.log(errors);
+
+  const x = (str) =>{
+    console.log(str)
+    if(str.length < 3){
+      console.log("invalid")
+    }
+  }
+
   return (
     <Form onSubmit={handleSubmit(onSubmit)}>
       <h1>Register</h1>
@@ -41,6 +49,8 @@ function RegisterFormDemo() {
             val.split(" ").filter((word) => word.length >= 3).length >= 4
         })}
       />
+
+      <input onChange={(e)=>x(e.target.value)}/>
 
       <Button>Register</Button>
     </Form>

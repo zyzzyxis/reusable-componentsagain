@@ -31,19 +31,4 @@ const Home = () => {
   )
 }
 
-//class component
-//home is inheriting from react.component, so home is now a react.component
-
-// class Home extends React.Component {
-
-//     render() {
-//         return(
-//           <div>
-//             <h1>Home</h1>
-//           </div>
-//         )
-//     }
-
-// }
-
 export default Home;

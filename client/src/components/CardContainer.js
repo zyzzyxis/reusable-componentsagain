@@ -10,4 +10,4 @@ const CardContainer = styled.div`
   box-shadow: ${SHADOW};
 `
 
-export default CardContainer
+export default CardContainer;
