@@ -10,7 +10,7 @@ export const SHADOW = '2px 2px 7px 1px #ddd'
 
 
 export const ALERT_BACKGROUND = 'pink';
-export const ALERT_TEXT_COLOR = 'red';
+export const ALERT_TEXT_COLOR = 'black';
 
 export const WARN_BACKGROUND = '#FED8B1';
 export const WARN_TEXT_COLOR = 'orange';
