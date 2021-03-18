@@ -1,7 +1,7 @@
 import {useState} from 'react'
 import styled from 'styled-components'
 import { ALERT_BACKGROUND, ALERT_TEXT_COLOR, BORDER_RADIUS, NOTIFY_BACKGROUND, NOTIFY_TEXT_COLOR, PADDING, PADDING2_EVEN_LARGE, WARN_BACKGROUND, WARN_TEXT_COLOR } from '../styles'
-import Fade from 'fade'
+import Fade from './Fade'
 
 // <FormatedMessage type='alert'
 const getTextColor = (props) =>{
@@ -24,7 +24,7 @@ const getBackgroundColor = (props) =>{
     }
 }
 
-export const FormattedMessage = styled.div`
+export const FormattedMessageWrapper = styled.div`
   color: ${(props) =>  getTextColor(props)};
     border: 2px solid ${(props) => !props.noBackground ? getTextColor(props) : 'white'};
     background: ${(props) => !props.noBackground ? getBackgroundColor(props) : 'white'};
@@ -32,7 +32,7 @@ export const FormattedMessage = styled.div`
     padding: ${ (props) => !props.noBackground ? PADDING2_EVEN_LARGE: '0px'}
 `
 
-const FormatedMessage = (props) => {
+const FormattedMessage = (props) => {
     const {children, type} = props
     const [hide, setHide] = useState(false)
     return(

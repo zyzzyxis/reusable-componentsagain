@@ -25,12 +25,6 @@ function RegisterFormDemo() {
   console.log(watch("example")); // you can watch individual input by pass the name of the input
   console.log(errors);
 
-  const x = (str) =>{
-    console.log(str)
-    if(str.length < 3){
-      console.log("invalid")
-    }
-  }
 
   return (
     <Form onSubmit={handleSubmit(onSubmit)}>
@@ -50,7 +44,7 @@ function RegisterFormDemo() {
         })}
       />
 
-      <input onChange={(e)=>x(e.target.value)}/>
+      <input minLength='5'/>
 
       <Button>Register</Button>
     </Form>
